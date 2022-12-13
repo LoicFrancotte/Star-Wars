@@ -1,0 +1,92 @@
+body{
+    width: auto;
+    height: 100%;
+    background: url(img/back.png);
+    overflow: hidden;
+}
+    
+.fade{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    top: -25px;
+    z-index: 1;    
+}
+    
+.star-wars{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+    
+.crawl{
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+    animation-delay: 5s;
+}
+    
+.crawl > .title{
+    font-size: 90%;
+    text-align: center;
+}
+    
+.crawl > .title h1{
+    margin: 0 0 100px;
+    text-transform: uppercase;   
+}
+    
+.a-long-time-ago {
+    font-size: 32px;
+    color: #4bd5ee;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: a-long-time-ago;
+    animation-timing-function: ease-out;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    top: 380px;
+}
+    
+@keyframes a-long-time-ago {
+    0% {
+    opacity: 0;
+    }
+    
+    20% {
+    opacity: 1;
+    }
+    
+    80% {
+    opacity: 1;
+    }
+    
+    100% {
+    opacity: 0;
+    }
+}
+
+@keyframes crawl{
+    0% {
+    top: 1000px;
+    transform: rotateX(20deg) translateZ(0);
+    }
+    100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
